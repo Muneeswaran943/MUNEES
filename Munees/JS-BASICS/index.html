@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Geolocation</h2>
+
+<p>Click the button to get your coordinates.</p>
+
+
+
+<p id="demo"></p>
+
+<script>
+  function Car() {}
+  const car1 = new Car ();
+  const car2 = new Car ();
+  
+console.log(car1.color);
+
+Car.prototype.color = "original color";
+console.log(car1.color);
+
+car1.color ="black";
+console.log(car1.color);
+
+console.log(Object.getPrototypeOf(car1).color);
+console.log(Object.getPrototypeOf(car2).color);
+
+
+function Person(fName,lName) {
+     this.firstName = fName,
+     this.lastName = lName
+}
+
+Person.prototype.getFullName = function(){
+  return this.firstName + " "+this.lastName;
+};
+
+
+const person1 = new Person("Elon","Musk")
+const person2 = new Person("Bill","Gates")
+
+
+console.log(person2.getFullName());
+
+
+function Person(){
+  this.name ="Elon Musk"
+}
+Person.prototype.age = 25;
+
+const person3 = new Person();
+
+Person.prototype  = {age: 52};
+
+const person4 = new Person();
+
+
+console.log(person3.age);
+console.log(person4.age);
+
+
+
+const players = [
+    {name:'ronaldo',age:36,teams:["marid","united"]
+    },
+    {
+      name:'messi',age:34,teams:["barcelona","psg"]
+    },
+    {
+      name:'neymar',age:25,teams:["barcelona","psg"]
+    },
+    {
+     name:'haaland',age:28,teams:["dortmund","city"]
+    }
+    
+    ];
+    console.table((
+      
+    players.filter(player => player.age<30))
+    // player.filter(p => p.teams.includes("psg"))
+    );
+</script>
+
+</body>
+</html>
